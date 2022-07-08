@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: url("./image/bg2.jpg") no-repeat center center fixed;
+            /*兼容浏览器版本*/
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    <title>图片</title>
+</head>
+
+<body>
+
+    <head>
+        <nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html"><strong>YHD</strong></a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./picture.html">图片</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./article.html">文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./docs.html">报告</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <div class="row align-items-start mt-5">
+                <div class="col">
+                    <img src="./image/星空.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空2.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空3.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+            </div>
+            <div class="row align-items-start mt-5">
+                <div class="col">
+                    <img src="./image/星空4.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空5.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空6.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+            </div>
+            <div class="row align-items-start mt-5">
+                <div class="col">
+                    <img src="./image/星空7.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空5.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+                <div class="col">
+                    <img src="./image/星空6.jpg" class="rounded img-thumbnail" onclick="showFullImage(event)" title="点击放大">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <img id="fullImage" src="" class="rounded img-thumbnail" title="点击缩小">
+    </div>
+    <script>
+        function showFullImage(event) {
+            // 设置要全屏显示的图片src
+            document.getElementById('fullImage').src = event.target.src;
+            // 得到Y滚动条宽度
+            // innerWidth是以像素为单位的窗口的内部宽度。如果垂直滚动条存在，则这个属性将包括它的宽度
+            // offsetWidth 是一个只读属性，返回一个元素的布局宽度
+            var scrollbarWidth = window.innerWidth - document.body.offsetWidth;
+            // body不能滚动      
+            document.body.style.overflowY = 'hidden';
+            // 防止页面在隐藏滚动条时闪动      
+            document.body.style.marginRight = scrollbarWidth + 'px';
+
+            var popup = document.getElementById('popup');
+            popup.style.display = 'flex';
+            popup.style.animation = 'fadein 0.5s';
+            popup.onclick = function () {
+                popup.style.animation = 'fadeout 0.6s';
+                // 延时将display置为none，以让有时间动画。注意设置隐退的时间多一点会更平滑。
+                setTimeout(() => {
+                    document.body.style.overflowY = 'auto';// body恢复滚动
+                    document.body.style.marginRight = 0;
+                    popup.style.display = 'none';
+                }, 500);
+            }
+        }
+    </script>
+</body>
+
+</html>

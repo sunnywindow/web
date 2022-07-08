@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: url("./image/bg2.jpg") no-repeat center center fixed;
+            /*兼容浏览器版本*/
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    <title>报告</title>
+</head>
+
+<body>
+
+    <head>
+        <nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html"><strong>YHD</strong></a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./picture.html">图片</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./article.html">文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./docs.html">报告</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <div class="container mt-5">
+        <div class="mt-5 fw-blod">
+            <h1>通信软件开发与应用</h1>
+        </div>
+        <div class="container mt-5 fw-blod">
+            <h2>一、开发目的</h2>
+            <div class="container mt-5">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;想要做一个与星空相关的网址</p>
+            </div>
+            <h2>二、开发过程</h2>
+            <div class="container mt-5 pull-left">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在一开始不知道怎么开始写，在参考了Bootstrap和mdb的模板后，就采用了静态web方式来进行网页的编写，将这个网站分为5部分，<br>欢迎界面，主页面，图片展示界面，文章界面，提示界面。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎界面将一张星空图片作为背景，写上相应标题，添加了一个按钮跳转到主页面。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页面由一个导航条，文章简介，图片缩量图展示组成。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片界面有9张图片，每个图片可以通过点击放大。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文章界面由标题，作者，和文章主体构成。<br>
+                </p>
+            </div>
+            <h2>三、开发问题</h2>
+            <div class="container mt-5 pull-left">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在实现点击图片放大时会出现因为图片过大展示不全的问题，后面将图片展示改为img-thumbnail缩略图恢复正常。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
